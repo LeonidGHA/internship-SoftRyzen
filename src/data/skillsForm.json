@@ -1,0 +1,27 @@
+{
+  "englishLevel": {
+    "title": "Рівень англійської",
+    "levels": [
+      "Beginner/Elementary  (А1)",
+      "Pre-Intermediate (А2)",
+      "Intermediate (В1)",
+      "Upper Intermediate (В2)",
+      "Advanced (С1)",
+      "Proficiency (С2)"
+    ]
+  },
+  "whyAreYou": {
+    "label": "Чому Ви найкращий кандидат? Що Вас мотивує?",
+    "placeholder": "Напишіть про себе",
+    "errMsg": "Це поле є обов'язковим"
+  },
+  "resumeUrl": {
+    "label": "Посилання на резюме (Google Drive, Dropbox)",
+    "placeholder": "Введіть посилання на резюме",
+    "errMsg": "Це поле є обов'язковим"
+  },
+  "documentationTestUrl": {
+    "label": "Посилання на тестову документацію (за наявності)",
+    "placeholder": "Введіть посилання на документацію"
+  }
+}

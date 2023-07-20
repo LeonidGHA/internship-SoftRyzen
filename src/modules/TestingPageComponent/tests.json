@@ -1,0 +1,118 @@
+{
+  "tests": [
+    {
+      "id": 205,
+      "createAt": "2023-06-29T16:25:07.732Z",
+      "updateAt": "2023-06-29T16:25:07.732Z",
+      "questionText": "За допомогою якого символа здійснюється конкатенація селекторів?",
+      "code": "null",
+      "answers": ["&", "#", "@", "$"],
+      "correctAnswerIndex": 1,
+      "direction": "Frontend",
+      "blockQuestions": "HTML",
+      "difficulty": "Easy",
+      "points": 1
+    },
+    {
+      "id": 185,
+      "createAt": "2023-06-29T16:25:07.732Z",
+      "updateAt": "2023-06-29T16:25:07.732Z",
+      "questionText": "Що таке тег?",
+      "code": "null",
+      "answers": [
+        "елемент мови розмітки гіпертексту",
+        "пояснення у вихідному коді",
+        "значення власивості для оформлення зовнішнього вигляду",
+        "найбільший будівельний блок"
+      ],
+      "correctAnswerIndex": 1,
+      "direction": "Frontend",
+      "blockQuestions": "CSS",
+      "difficulty": "Easy",
+      "points": 1
+    },
+    {
+      "id": 142,
+      "createAt": "2023-06-29T16:25:07.732Z",
+      "updateAt": "2023-06-29T16:25:07.732Z",
+      "questionText": "Які два типи експорту модулів існують у ECMAScript Modules?",
+      "code": "null",
+      "answers": [
+        "named export и default export",
+        "function export и variable export",
+        "single export и multiple exports"
+      ],
+      "correctAnswerIndex": 1,
+      "direction": "Frontend",
+      "blockQuestions": "JavaScript",
+      "difficulty": "Easy",
+      "points": 1
+    },
+    {
+      "id": 142,
+      "createAt": "2023-06-29T16:25:07.732Z",
+      "updateAt": "2023-06-29T16:25:07.732Z",
+      "questionText": "Які два типи експорту модулів існують у ECMAScript Modules?",
+      "code": "null",
+      "answers": [
+        "named export и default export",
+        "function export и variable export",
+        "single export и multiple exports"
+      ],
+      "correctAnswerIndex": 1,
+      "direction": "Frontend",
+      "blockQuestions": "JavaScript",
+      "difficulty": "Easy",
+      "points": 1
+    },
+    {
+      "id": 223,
+      "createAt": "2023-06-29T16:25:07.732Z",
+      "updateAt": "2023-06-29T16:25:07.732Z",
+      "questionText": "props може бути null або порожній об'єкт?",
+      "code": "null",
+      "answers": ["так", "ні"],
+      "correctAnswerIndex": 1,
+      "direction": "Frontend",
+      "blockQuestions": "React",
+      "difficulty": "Easy",
+      "points": 1
+    },
+    {
+      "id": 24,
+      "createAt": "2023-06-29T16:25:07.731Z",
+      "updateAt": "2023-06-29T16:25:07.731Z",
+      "questionText": "Що таке CMS (Система управління вмістом) і яку роль вона відіграє в розробці веб-сайтів?",
+      "code": "null",
+      "answers": [
+        "CMS - це програмний код для захисту веб-сайту від зламу.",
+        "CMS - це спеціальний тип веб-хостингу для великих проєктів.",
+        "CMS - це інструмент, що дозволяє легко керувати та редагувати вміст веб-сайту.",
+        "CMS - це дизайн-шаблон, що використовується для створення веб-сайтів."
+      ],
+      "correctAnswerIndex": 3,
+      "direction": "PM",
+      "blockQuestions": "Common",
+      "difficulty": "Easy",
+      "points": 1
+    },
+    {
+      "id": 275,
+      "createAt": "2023-07-07T09:49:06.249Z",
+      "updateAt": "2023-07-07T09:49:06.249Z",
+      "questionText": "Що таке цільова аудиторія в контексті досліджень у веб-дизайні?",
+      "code": null,
+      "answers": [
+        "Група людей, які відвідують веб-сайт",
+        "Список потенційних клієнтів",
+        "Сегмент реальних або потенційних користувачів, які мають спільні характеристики",
+        "Усі користувачі, що залишають коментарі на веб-сайті"
+      ],
+      "correctAnswerIndex": 3,
+      "direction": "Designer",
+      "blockQuestions": "Design",
+      "difficulty": "Easy",
+      "points": 1
+    }
+  ]
+}

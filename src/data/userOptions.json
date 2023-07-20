@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Профіль",
+    "icon": "USER"
+  },
+  {
+    "label": "Налаштування",
+    "icon": "SETTINGS"
+  },
+  {
+    "label": "Вихід",
+    "icon": "LOGOUT"
+  }
+]

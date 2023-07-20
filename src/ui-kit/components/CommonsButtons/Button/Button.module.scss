@@ -1,0 +1,72 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.btn {
+  width: 180px;
+  @include flex();
+  column-gap: 20px;
+  padding: 12px;
+  @include font(18px, 600, 1.56);
+  color: var(--light-primary-txt-cl);
+  border: none;
+  background-color: var(--accent-cl);
+  @include transitioned(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-cl);
+  }
+  &:disabled {
+    background-color: var(--auth-btn-disbl-cl);
+  }
+}
+
+.btnCentered {
+  margin: 0 auto;
+}
+
+.btnShort {
+  width: 186px;
+
+  &:disabled {
+    background-color: var(--test-btn-disbl-cl);
+  }
+}
+
+.btnWidth240 {
+  width: 240px;
+}
+
+.btnWidth259 {
+  width: 259px;
+}
+
+.btnLongest {
+  width: 284px;
+  @include font(14px, 700, 1.3);
+}
+
+.btnSmallText {
+  @include font(16px, 600);
+}
+
+.btnLight {
+  color: var(--accent-cl);
+  border: 2px solid var(--accent-cl);
+  background-color: transparent;
+  @include transitioned(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--light-btn-hover-cl);
+  }
+}
+
+.linkDisabled {
+  background-color: var(--test-btn-disbl-cl);
+  pointer-events: none;
+  cursor: default;
+}
+
+.text {
+  flex-shrink: 0;
+}

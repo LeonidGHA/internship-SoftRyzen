@@ -1,0 +1,76 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.pageSection {
+  padding: 40px 0;
+}
+
+.container {
+  padding-top: 96px;
+
+  @include mq(tablet) {
+    padding-top: 140px;
+  }
+
+  @include mq(desktop) {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.pageTitle {
+  width: 100%;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+
+  @include font(20px, 600, 1.4);
+  text-align: center;
+
+  @include mq(tablet) {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.cardsList {
+  @include mq(tablet-only) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 22px;
+    row-gap: 12px;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.cardItem {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  margin-bottom: 12px;
+
+  border-radius: 4px;
+  background-color: var(--secondary-cl);
+
+  @include mq(tablet) {
+    margin-bottom: 0px;
+  }
+
+  @include mq(desktop) {
+    height: 132px;
+    flex-direction: row;
+    padding: 16px 20px;
+    align-items: center;
+  }
+
+  &:not(:last-child) {
+    @include mq(desktop) {
+      margin-bottom: 16px;
+    }
+  }
+}

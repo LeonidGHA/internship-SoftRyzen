@@ -1,0 +1,45 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-bottom: 16px;
+  padding: 12px;
+
+  border-radius: 2px;
+  background-color: white;
+
+  @include mq(desktop) {
+    min-width: 676px;
+  }
+
+  .title {
+    @include font(var(--text-lg), 300, 1.5);
+    color: var(--accent-cl);
+  }
+
+  .text {
+    @include font(var(--text-md), 300, 1.7);
+
+    @include mq(tablet) {
+      @include font(var(--text-lg), 300, 1.5);
+    }
+  }
+
+  .ruleItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+  }
+
+  .iconWrapper {
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

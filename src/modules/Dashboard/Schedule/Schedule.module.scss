@@ -1,0 +1,30 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.schedule {
+  display: grid;
+  gap: 8px;
+
+  margin-bottom: 8px;
+  padding: 20px 27px 20px 20px;
+
+  background-color: var(--secondary-cl);
+
+  @include mq(tablet-only) {
+    width: 700px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
+    gap: 16px;
+  }
+
+  @include mq(desktop) {
+    width: 575px;
+    flex-shrink: 0;
+    flex-direction: column;
+
+    padding-left: 44px;
+
+    background-image: url('src/assets/svg/big-calendar.svg');
+    background-repeat: no-repeat;
+    background-position: bottom 20px right 20px;
+  }
+}

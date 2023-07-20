@@ -1,0 +1,17 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  max-width: 1104px;
+  margin: 0 auto;
+}
+
+.timerWrapper {
+  p {
+    text-align: right;
+    color: var(--accent-cl);
+    @include font(18px, 600, 1.55);
+  }
+}

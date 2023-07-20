@@ -1,0 +1,24 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.button {
+  @include flex(center, center);
+  gap: 8px;
+  padding: 12px 28px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 100%;
+  max-width: 392px;
+
+  @include font(16px, 300, 1.5);
+
+  color: var(--secondary-txt-cl);
+  background-color: var(--light-blue-cl);
+  @include transitioned(all);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+    background-color: var(--auth-btn-disbl-cl);
+  }
+}

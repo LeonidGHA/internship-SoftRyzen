@@ -1,0 +1,53 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.testList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 26px;
+
+  @include mq(tablet) {
+    margin-top: 18px;
+  }
+}
+
+.testListItem {
+  display: flex;
+  align-items: center;
+}
+
+.testIcon {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-cl);
+}
+
+.testIconWrapper {
+  padding: 10px;
+  background-color: var(--light-radio-cl);
+  border-radius: 10px;
+}
+
+.testTitle {
+  margin: 0;
+  margin-left: 8px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.testData {
+  color: var(--accent-cl);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.testDataWrapper {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.testDropdownButton {
+  color: var(--accent-cl);
+}

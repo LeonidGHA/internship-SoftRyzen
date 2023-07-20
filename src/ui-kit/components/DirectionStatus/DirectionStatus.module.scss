@@ -1,0 +1,30 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.container {
+  @include flex();
+  height: 32px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include font(18px, 600, 1.55);
+  color: var(--auth-btn-disbl-cl);
+
+  border: solid 1px var(--auth-btn-disbl-cl);
+  border-radius: 8px;
+
+  &.active {
+    border-color: var(--green-cl);
+    color: var(--green-cl);
+  }
+
+  @include mq(tablet) {
+    height: 44px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.text {
+  text-transform: capitalize;
+}

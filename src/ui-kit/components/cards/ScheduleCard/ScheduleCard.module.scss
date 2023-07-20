@@ -1,0 +1,77 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.container {
+  width: 207px;
+  list-style: none;
+
+  @include mq(tablet-only) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.start {
+  margin-bottom: 8px;
+  font-family: var(--font-inter);
+  @include font(14px, 400);
+}
+
+.block {
+  position: relative;
+  left: 23px;
+  padding: 12px 20px 12px 16px;
+  width: 184px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  border-radius: 2px;
+  border-left-width: 4px;
+  border-left-style: solid;
+  background: rgba(37, 101, 208, 0.28);
+
+  @include mq(tablet-only) {
+    margin-right: 0px;
+    flex-basis: 100%;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: -26px;
+    border-radius: 8px;
+  }
+
+  &.blue {
+    border-left-color: var(--accent-cl);
+    background-color: rgba(37, 101, 208, 0.28);
+
+    &::before {
+      background-color: var(--accent-cl);
+    }
+  }
+  &.green {
+    border-left-color: var(--green-cl);
+    background-color: rgba(24, 178, 163, 0.28);
+
+    &::before {
+      background-color: var(--green-cl);
+    }
+  }
+  &.red {
+    border-left-color: var(--red-cl);
+    background-color: rgba(244, 63, 94, 0.28);
+
+    &::before {
+      background-color: var(--red-cl);
+    }
+  }
+}
+
+.duration {
+  @include font(14px, 400, 1.4);
+}

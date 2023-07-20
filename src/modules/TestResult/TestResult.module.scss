@@ -1,0 +1,109 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.testResult {
+  padding-top: 60px;
+
+  @include mq(tablet) {
+    padding-top: 80px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 71px;
+  }
+}
+
+.resultWrapper {
+  @include mq(tablet) {
+    width: 424px;
+    margin: 0 auto;
+  }
+}
+
+.resultInfoWrapper {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+
+  @include mq(tablet) {
+    margin-top: 28px;
+  }
+
+  @include mq(desktop) {
+    margin-top: 36px;
+  }
+
+  &.correctAnswers {
+    margin-top: 75px;
+
+    @include mq(tablet) {
+      margin-top: 40px;
+    }
+  }
+}
+
+.resultInfoTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.resultInfoCount {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent-cl);
+}
+
+.progressListWrapper {
+  margin-top: 24px;
+
+  @include mq(desktop) {
+    margin-top: 16px;
+  }
+}
+
+.testPassBox {
+  width: 284px;
+  margin: 24px auto 32px auto;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 2px;
+
+  &.passed {
+    border: 1px solid var(--green-cl);
+  }
+
+  &.failed {
+    border: 1px solid var(--red-cl);
+  }
+}
+
+.testPassIcon {
+  width: 24px;
+  height: 24px;
+  color: var(--green-cl);
+
+  &.iconFailed {
+    transform: rotate(180deg);
+    color: var(--red-cl);
+  }
+}
+
+.testPassText {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--green-cl);
+
+  &.textFailed {
+    color: var(--red-cl);
+  }
+}
+
+.finishButton {
+  border-radius: 4px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}

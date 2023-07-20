@@ -1,0 +1,59 @@
+@use '/src/styles/global.scss' as *;
+
+.label {
+  @extend %text-label;
+
+  position: relative;
+  margin-bottom: 28px;
+
+  @include flex(center, left, column);
+
+  color: var(--primary-txt-cl);
+
+  @include mq(tablet) {
+    @include font(16px, 300, 1.5);
+  }
+}
+
+.textLabel {
+  margin-bottom: 4px;
+}
+
+.textError {
+  position: absolute;
+  bottom: -20px;
+
+  color: var(--red-cl);
+
+  @include font(12px, 400, 1.33);
+}
+
+.inputField {
+  width: 100%;
+  padding: 4px 0;
+
+  outline: none;
+
+  border-bottom: 1px solid var(--accent-cl);
+  transition: var(--transition);
+
+  @include font(12px, 400, 1.6);
+
+  @include mq(tablet) {
+    @include font(14px, 400, 1.4);
+    padding: 8px 0;
+  }
+
+  &:focus {
+    padding-left: 10px;
+    border: 1px solid var(--accent-cl);
+    border-radius: 4px;
+  }
+}
+
+.inputField::placeholder {
+  @extend %text-placeholder;
+
+  color: var(--placeholder-cl);
+  @include font(12px, 400, 1.66);
+}

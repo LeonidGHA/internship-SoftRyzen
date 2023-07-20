@@ -1,0 +1,23 @@
+[
+  {
+    "key": "test",
+    "label": "Онлайн тестування",
+    "start": "1/07/23",
+    "duration": "1 - 5 липня",
+    "color": "blue"
+  },
+  {
+    "key": "task",
+    "label": "Тестове завдання",
+    "start": "6/07/23",
+    "duration": "6 - 9 липня",
+    "color": "green"
+  },
+  {
+    "key": "interview",
+    "label": "Онлайн інтерв’ю",
+    "start": "10/07/23",
+    "duration": "10 - 20 липня",
+    "color": "red"
+  }
+]

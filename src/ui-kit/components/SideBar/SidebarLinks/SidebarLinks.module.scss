@@ -1,0 +1,5 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.list {
+  @include flex(flex-start, stretch, column);
+}

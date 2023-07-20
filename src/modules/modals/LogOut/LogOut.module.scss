@@ -1,0 +1,40 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.logOutWrapper {
+  @include mq(mobile-only) {
+    width: 70vw;
+    max-width: 372px;
+  }
+
+  @include flex(center, center, column);
+  @include mq(tablet) {
+    width: 372px;
+    min-height: 164px;
+  }
+}
+
+.logOutTitle {
+  text-align: center;
+  @include font(20px, 700, 1.4);
+}
+
+.logOutBtnsWrapper {
+  @include flex(center, center, column);
+  gap: 12px;
+  margin-top: 40px;
+  @include mq(tablet) {
+    flex-direction: row;
+    margin-top: 74px;
+  }
+}
+
+.logOutBtnBack {
+  border: 1px solid;
+  border-radius: 8px;
+  height: 48px;
+}
+
+.logOutBtnExit {
+  height: 48px;
+  border-radius: 8px;
+}

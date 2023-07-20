@@ -1,0 +1,55 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.authContainer {
+  width: 100%;
+  height: 100vh;
+  @include flex(center, center, column);
+  margin: 0 auto;
+  padding: 12px 20px;
+  overflow-y: auto;
+
+  @include mq(mobile) {
+    width: 480px;
+  }
+  @include mq(tablet) {
+    width: 768px;
+    padding: 0 32px;
+  }
+  @include mq(desktop) {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.main {
+  @include mq(desktop) {
+    @include flex();
+  }
+}
+
+.decor {
+  display: none;
+  @include mq(desktop) {
+    display: block;
+    width: 50%;
+    height: 100vh;
+    background-color: var(--accent-cl);
+    background-image: linear-gradient(
+        to bottom,
+        var(--layout-auth-page-cl),
+        var(--layout-auth-page-cl)
+      ),
+      url('../../../assets/img/auth/auth-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to bottom,
+          var(--layout-auth-page-cl),
+          var(--layout-auth-page-cl)
+        ),
+        url('../../../assets/img/auth/auth-bg@2x.png');
+    }
+  }
+}

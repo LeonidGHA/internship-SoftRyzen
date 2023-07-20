@@ -1,0 +1,36 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.tabsWrapper {
+  p {
+    @include font(18px, 600, 1.55);
+    margin-bottom: 12px;
+  }
+}
+
+.customLine {
+  position: relative;
+  width: 832px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.line {
+  border-radius: 4px;
+  flex-grow: 1;
+  height: 4px;
+  background-color: var(--light-blue-cl);
+}
+
+.active {
+  height: 6px;
+  border-radius: 8px;
+  background-color: var(--accent-cl);
+}
+
+.iconFlag {
+  position: absolute;
+  right: -4px;
+
+  transform: translate(100%, -50%);
+}

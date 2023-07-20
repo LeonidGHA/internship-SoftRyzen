@@ -1,0 +1,27 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.main {
+  @include flex();
+  overflow-y: auto;
+
+  @include mq(desktop) {
+    padding-top: 101px;
+    height: 100vh;
+    @include flex(flex-start, flex-start, row);
+  }
+}
+
+.contentWrapper {
+  padding-top: 76px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+
+  @include mq(tablet) {
+    padding-top: 101px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 0px;
+  }
+}

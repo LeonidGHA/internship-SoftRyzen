@@ -1,0 +1,116 @@
+@use '/src/styles/global.scss' as *;
+
+.form {
+  label {
+    &:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+
+    @include mq(tablet) {
+      margin-bottom: 12px;
+    }
+  }
+
+  @include mq(tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-auto-flow: column;
+    column-gap: 48px;
+
+    & button {
+      grid-row: 4;
+      grid-column: 1 / -1;
+    }
+
+    label {
+      &:nth-of-type(3n) {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include mq(desktop) {
+      column-gap: 24px;
+    }
+  }
+
+  .phoneLabel {
+    position: relative;
+    padding-bottom: 20px;
+    @include flex(center, left, column);
+    @extend %text-label;
+    transition: var(--transition);
+
+    &:focus-within {
+      color: var(--accent-cl);
+    }
+
+    @include mq(tablet) {
+      @include font(16px);
+    }
+  }
+
+  .phoneErrorMsg {
+    position: absolute;
+    bottom: 0;
+    @include font(12px);
+    color: var(--red-cl);
+  }
+
+  .phoneContainer {
+    font-family: var(--font-nunito);
+
+    .phoneInput {
+      border: none;
+      background: none;
+      border-radius: 0;
+      width: 100%;
+      height: auto;
+      padding: 4px 50px;
+
+      @include font(12px, 300, 1.33);
+
+      font-family: var(--font-nunito);
+      color: var(--primary-txt-cl);
+      border-bottom: 1px solid var(--accent-cl);
+
+      @include mq(tablet) {
+        padding: 8px 50px;
+        @include font(14px);
+      }
+
+      &::placeholder {
+        @extend %text-placeholder;
+        color: var(--placeholder-cl);
+      }
+
+      &.inputError::placeholder {
+        color: var(--red-cl);
+      }
+    }
+
+    .phoneBtn {
+      border: none;
+      background: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 40px;
+        background-color: var(--accent-cl);
+
+        @include mq(tablet) {
+          bottom: 12px;
+        }
+      }
+    }
+  }
+}

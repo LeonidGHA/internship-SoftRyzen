@@ -1,0 +1,63 @@
+@use './mixins.scss' as *;
+
+%main-title {
+  @include font(32px, 600, 1.25); // line-height: 40px
+
+  @include mq(tablet) {
+    @include font(40px, 600, 1.4); // line-height: 56px
+  }
+}
+
+%title {
+  @include font(18px, 600, 1.55); // line-height: 28px
+
+  @include mq(tablet) {
+    @include font(20px, 600, 1.4); // line-height: 28px
+  }
+}
+
+%text-md {
+  @include font(16px, 400, 1.5); // line-height: 24px
+}
+
+%text-sm {
+  @include font(14px, 400, 1.43); // line-height: 20px
+}
+
+// FORMS:
+
+%text-label {
+  @include font(14px, 300, 1.42); // line-height: 20px
+  color: var(--primary-txt-cl);
+
+  @include mq(desktop) {
+    @include font(16px, 300, 1.5); // line-height: 24px
+  }
+}
+
+%text-placeholder {
+  @include font(12px, 400, 1.67); // line-height: 20px
+  color: var(--placeholder-cl);
+
+  @include mq(desktop) {
+    @include font(14px, 400, 1.42); // line-height: 20px
+  }
+}
+
+%mainContainerWithoutDesktop {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq(mobile) {
+    width: 480px;
+  }
+
+  @include mq(tablet) {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../styles/global.scss';
+
+.notFoundWrapper {
+  @include flex(center, center, column);
+  height: 100%;
+}
+
+.notFoundSvgWrapper {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  margin-bottom: 40px;
+  @include mq(tablet) {
+    margin-bottom: 60px;
+  }
+}
+
+.notFoundText {
+  margin-bottom: 40px;
+
+  text-align: center;
+  @include font(18px, 600, 1.55);
+
+  @include mq(tablet) {
+    margin-bottom: 60px;
+
+    @include font(20px, 600, 1.4);
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 64px;
+  }
+}
+
+.notFoundBtn {
+  width: 100%;
+  max-width: 256px;
+  @include mq(tablet) {
+    max-width: 240px;
+  }
+}

@@ -1,0 +1,201 @@
+@import './base/fonts';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/placeholders';
+@import './base/normalize';
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  @include font();
+  font-family: var(--font-nunito);
+
+  color: var(--primary-txt-cl);
+  background-color: var(--primary-cl);
+
+  // transition: background-color var(--transition), color var(--transition);
+}
+#root {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+svg {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.blockScroll {
+  overflow: hidden;
+}
+
+.mainContainer {
+  @extend %mainContainerWithoutDesktop;
+
+  @include mq(desktop) {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.headerContainer {
+  @extend %mainContainerWithoutDesktop;
+  width: 100%;
+
+  @include mq(desktop) {
+    padding-left: 28px;
+    padding-right: 40px;
+  }
+}
+
+// TOASTIFY
+
+.Toastify__toast-container {
+  padding: 0;
+}
+
+.Toastify__toast {
+  padding: 16px;
+}
+
+.Toastify__toast-body {
+  margin-right: 16px;
+  padding: 0;
+  column-gap: 16px;
+}
+.Toastify__toast-body > div {
+  white-space: pre-line !important;
+  font-family: var(--font-nunito);
+  @include font();
+  @include mq(mobile-only) {
+    @include font(12px);
+  }
+  font-weight: 300 !important;
+}
+
+.Toastify__toast--error > .Toastify__toast-body > div::first-line,
+.Toastify__toast--success > .Toastify__toast-body > div::first-line {
+  @include font(18px, 600, 1.56);
+}
+
+.Toastify__toast-icon {
+  margin: 0;
+  width: 24px;
+  height: 24px;
+}
+.Toastify__close-button--light {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+}
+
+.Toastify__toast-theme--light.Toastify__toast--error {
+  color: var(--toastify-icon-color-error);
+}
+
+.Toastify__toast-theme--light.Toastify__toast--warning {
+  @include font();
+  color: var(--toastify-text-color-warning);
+  background-color: var(--toastify-bg-color-warning);
+}
+
+.Toastify__toast-theme--light.Toastify__toast--success {
+  color: var(--toastify-icon-color-success);
+}
+
+.Toastify__toast-theme--light.Toastify__toast--error
+  > .Toastify__close-button--light
+  > svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--toastify-icon-color-error);
+}
+
+.Toastify__toast-theme--light.Toastify__toast--warning
+  > .Toastify__close-button--light
+  > svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--toastify-text-color-warning);
+}
+
+.Toastify__toast-theme--light.Toastify__toast--success
+  > .Toastify__close-button--light
+  > svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--toastify-icon-color-success);
+}
+
+.Toastify__progress-bar-theme--light.Toastify__progress-bar--success {
+  background-color: var(--toastify-icon-color-success);
+}
+
+// Contact form
+// react-phone-2
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background: none !important;
+}
+
+.react-tel-input .flag-dropdown.open {
+  background: none !important;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background: none !important;
+}
+
+.react-tel-input .selected-flag {
+  padding: 0 !important;
+}
+
+.react-tel-input .selected-flag .arrow {
+  border: none !important;
+  width: 16px !important;
+  height: 16px !important;
+  background-image: url('../assets/svg/arrow-down.svg') !important;
+  left: 20px !important;
+  top: 0 !important;
+
+  transition: transform var(--transition);
+}
+
+.react-tel-input .selected-flag .arrow.up {
+  border: none !important;
+  transform: rotateX(180deg) !important;
+}
+
+.react-tel-input .flag-dropdown {
+  top: -4px !important;
+}
+
+.react-tel-input .form-control:focus {
+  outline: auto !important;
+  outline-color: var(--accent-cl) !important;
+}
+
+.selected-flag:focus {
+  outline: auto !important;
+  outline-color: inherit !important;
+}
+// Contact form

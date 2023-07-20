@@ -1,0 +1,82 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.wrapper {
+  position: fixed;
+  top: 76px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 76px);
+  z-index: 20;
+  flex-shrink: 0;
+
+  transform: translateX(0);
+
+  @include transitioned(transform);
+
+  @include mq(tablet) {
+    top: 101px;
+    height: calc(100vh - 101px);
+  }
+
+  @include mq(desktop) {
+    position: static;
+    width: 184px;
+    height: 100%;
+    justify-content: flex-start;
+    border: none;
+    @include transitioned(width);
+  }
+}
+
+.wrapperHidden {
+  @extend .wrapper;
+
+  @include mq(desktop) {
+    width: 96px;
+  }
+}
+
+.noneWrapper {
+  @extend .wrapper;
+  transform: translateX(-100%);
+}
+
+.linkSide {
+  position: relative;
+  width: 184px;
+  height: calc(100vh - 76px);
+
+  padding: 40px 0;
+  background-color: var(--accent-cl);
+
+  @include mq(tablet) {
+    height: calc(100vh - 101px);
+  }
+
+  @include mq(desktop) {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 56px;
+  }
+}
+
+.togglerToLeft {
+  display: none;
+
+  @include mq(desktop) {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: -12px;
+    cursor: pointer;
+    @include transitioned(transform);
+    transform: rotate(180deg);
+  }
+}
+
+.togglerToRight {
+  @extend .togglerToLeft;
+  transform: rotate(0deg);
+}

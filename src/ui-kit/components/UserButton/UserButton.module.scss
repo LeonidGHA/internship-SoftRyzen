@@ -1,0 +1,27 @@
+@use '/src/styles/global.scss' as *;
+
+.menuContainer {
+  position: relative;
+}
+
+.btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  @include mq(tablet) {
+    width: 44px;
+    height: 44px;
+
+    & img {
+      width: 44px;
+      height: 44px;
+    }
+
+    & svg {
+      width: 44px;
+      height: 44px;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@use '/src/styles/global.scss' as *;
+
+.inputContainer {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @include font(18px, 600, 1.55);
+  transition: var(--transition);
+
+  @include mq(desktop) {
+    gap: 16px;
+    @include font(20px, 600);
+  }
+
+  &:focus-within {
+    color: var(--accent-cl);
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+
+  resize: none;
+
+  @include font(14px, 300, 1.66);
+  color: var(--primary-txt-cl);
+
+  border: 1px solid var(--accent-cl);
+  border-radius: 2px;
+  background: none;
+
+  transition: padding var(--transition);
+
+  @include mq(tablet) {
+    @include font(12px);
+  }
+
+  &:focus {
+    outline-color: var(--accent-cl);
+    padding-left: 22px;
+  }
+
+  &:focus::placeholder {
+    color: var(--primary-txt-cl);
+  }
+}
+
+.input::placeholder {
+  @extend %text-placeholder;
+  color: var(--placeholder-cl);
+}
+
+.inputError {
+  &::placeholder {
+    color: var(--red-cl);
+  }
+}
+
+.msgError {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  @include font(12px);
+  color: var(--red-cl);
+}

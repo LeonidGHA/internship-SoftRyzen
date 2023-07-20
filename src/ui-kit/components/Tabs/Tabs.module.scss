@@ -1,0 +1,67 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.tabsNav {
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  position: relative;
+
+  cursor: pointer;
+  flex-grow: 1;
+
+  padding-bottom: 8px;
+  &:not(:first-of-type) {
+    padding-left: 10px;
+  }
+
+  @include font(12px, 400, 1.33);
+  color: var(--placeholder-cl);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    width: 100%;
+    height: 2px;
+    background-color: var(--auth-btn-disbl-cl);
+  }
+
+  &:first-child::before {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  &:last-child::before {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+  }
+
+  &.active {
+    color: var(--primary-txt-cl);
+  }
+
+  &.active::after {
+    background-color: var(--accent-cl);
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+}

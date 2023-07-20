@@ -1,0 +1,68 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.testStartup {
+  padding-top: 20px;
+
+  @include mq(tablet) {
+    padding-top: 28px;
+  }
+
+  @include mq(tablet) {
+    padding-top: 16px;
+  }
+}
+
+.testWrapper {
+  padding-top: 48px;
+
+  @include mq(tablet) {
+    padding-top: 52px;
+    width: 424px;
+    margin: 0 auto;
+  }
+
+  @include mq(desktop) {
+    padding-top: 24px;
+  }
+}
+
+.testLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--accent-cl);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.testButtonLink {
+  margin-top: 45px;
+
+  @include mq(tablet) {
+    margin-top: 52px;
+  }
+
+  @include mq(desktop) {
+    margin-top: 48px;
+  }
+}
+
+.progressListWrapper {
+  margin-top: 24px;
+
+  @include mq(tablet) {
+    margin-top: 20px;
+  }
+
+  @include mq(desktop) {
+    margin-top: 27px;
+  }
+}
+
+.notificationMessage {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--red-cl);
+}

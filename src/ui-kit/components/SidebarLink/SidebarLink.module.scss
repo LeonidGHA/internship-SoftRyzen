@@ -1,0 +1,58 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.clickable {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.unClickable {
+  pointer-events: none;
+  cursor: default;
+}
+
+.item {
+  padding: 12px 32px;
+  @include flex(flex-start);
+  column-gap: 12px;
+  color: var(--sidebar-icons-disabled-cl);
+  background-color: transparent;
+}
+
+.itemHidden {
+  @extend .item;
+  @include flex();
+}
+
+.itemInactive {
+  @extend .item;
+  color: var(--sidebar-icons-disabled-cl);
+}
+
+.itemActive {
+  color: white;
+}
+
+.itemClicked {
+  color: var(--accent-cl);
+  background-color: var(--light-blue-cl);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: inherit;
+}
+
+.iconStroked {
+  @extend .icon;
+  fill: unset;
+  stroke: inherit;
+}
+
+.label {
+  color: var(--sidebar-disabled-text-cl);
+}
+
+.labelClickable {
+  color: inherit;
+}

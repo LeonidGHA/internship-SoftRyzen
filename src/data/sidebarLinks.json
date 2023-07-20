@@ -1,0 +1,19 @@
+{
+  "links": [
+    {
+      "id": "main",
+      "linkAddress": "/",
+      "label": "Головна"
+    },
+    {
+      "id": "test",
+      "linkAddress": "/test",
+      "label": "Тест"
+    },
+    {
+      "id": "task",
+      "linkAddress": "/task",
+      "label": "Завдання"
+    }
+  ]
+}

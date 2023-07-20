@@ -1,0 +1,50 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.stepContainer {
+  position: relative;
+  @include flex(center, center, column);
+}
+
+.step {
+  @include flex();
+  width: 32px;
+  height: 32px;
+
+  font-family: var(--font-inter);
+  @include font(14px, 700, 1.3);
+  color: var(--secondary-cl);
+
+  background-color: var(--light-blue-cl);
+  border-radius: 50%;
+}
+
+.active {
+  background: none;
+  color: var(--accent-cl);
+  border: solid 1px;
+  border-color: var(--accent-cl);
+}
+
+.success {
+  background-color: var(--green-cl);
+  border-color: transparent;
+}
+
+.failure {
+  background-color: var(--red-cl);
+  border-color: transparent;
+}
+
+.description {
+  position: absolute;
+  bottom: -8px;
+  transform: translateY(100%);
+
+  white-space: nowrap;
+
+  @include font(12px, 400, 1.14);
+}
+
+.svg {
+  stroke: #fff;
+}

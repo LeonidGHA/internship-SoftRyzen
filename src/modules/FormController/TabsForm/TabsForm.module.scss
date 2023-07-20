@@ -1,0 +1,45 @@
+@use '/src/styles/global.scss' as *;
+
+.section {
+  padding-top: 76px;
+  padding-bottom: 76px;
+  width: 100%;
+
+  @include mq(tablet) {
+    padding-top: 101px;
+    padding-bottom: 101px;
+  }
+}
+
+.container {
+  @extend %mainContainerWithoutDesktop;
+
+  padding-top: 96px;
+
+  @include mq(tablet) {
+    padding-top: 140px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 0;
+    width: 774px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.title {
+  margin-bottom: 27px;
+
+  font-size: 20px;
+
+  @include mq(tablet) {
+    margin-bottom: 20px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 40px;
+  }
+
+  text-align: center;
+}

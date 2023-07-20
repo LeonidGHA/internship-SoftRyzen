@@ -1,0 +1,31 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.text {
+  @include font(16px, 300, 1.5);
+}
+
+.textColorBlue {
+  color: var(--accent-cl);
+  @include transitioned(color);
+  &:hover {
+    color: var(--hover-cl);
+  }
+}
+
+.textColorBlack {
+  color: var(--secondary-txt-cl);
+  @include transitioned(color);
+
+  &:hover {
+    color: var(--hover-cl);
+  }
+}
+
+.textLinkFontSemiBold {
+  font-weight: 600;
+}
+
+.textLinkUnderline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

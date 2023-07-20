@@ -1,0 +1,23 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.form {
+  width: 100%;
+  max-width: 392px;
+  margin: 0 auto 24px;
+
+  @include mq(tablet) {
+    margin-bottom: 20px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.input {
+  margin-bottom: 40px;
+
+  @include mq(tablet) {
+    margin-bottom: 60px;
+  }
+}

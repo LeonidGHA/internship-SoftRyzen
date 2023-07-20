@@ -1,0 +1,49 @@
+@use '/src/styles/utils/mixins.scss' as *;
+@use '/src/styles/utils/placeholders.scss' as *;
+
+.title {
+  margin-bottom: 12px;
+  @include font(24px, 600, 1.67);
+
+  @include mq(tablet) {
+    @include font(40px, 600, 1.4);
+  }
+}
+
+.info {
+  max-width: 280px;
+  margin: 0 auto 80px;
+  @extend %text-sm;
+  text-align: center;
+
+  @include mq(tablet) {
+    max-width: 360px;
+    margin-bottom: 80px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 60px;
+  }
+}
+
+.subText {
+  max-width: 280px;
+  margin: 0 auto 24px;
+  text-align: center;
+
+  @include mq(tablet) {
+    max-width: unset;
+    margin-bottom: 40px;
+  }
+}
+
+.subTextLink {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bottomLink {
+  justify-content: center;
+}

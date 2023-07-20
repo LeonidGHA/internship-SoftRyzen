@@ -1,0 +1,33 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.optionList {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  transform: translateY(100%);
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+
+  background-color: var(--secondary-cl);
+  box-shadow: var(--light-primary-shadow);
+}
+
+.item {
+  cursor: pointer;
+  @include flex(left, center, row);
+  gap: 8px;
+  min-width: 200px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  font-family: var(--font-inter);
+  @include font(14px, 400, 1.3);
+
+  border-bottom: solid 1px var(--light-blue-cl);
+
+  &:hover {
+    background-color: var(--light-blue-cl);
+  }
+}

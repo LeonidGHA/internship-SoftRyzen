@@ -1,0 +1,1 @@
+export { PasswordRecovered } from './PasswordRecovered';

@@ -1,0 +1,80 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.section {
+  padding-top: 24px;
+  padding-bottom: 40px;
+
+  @include mq(tablet) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.container {
+  width: 100vw;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mq(tablet) {
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include mq(desktop) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.descWrapper {
+  @include mq(tablet-only) {
+    max-width: 700px;
+  }
+
+  @include mq(desktop) {
+    width: 100%;
+  }
+}
+
+.wrapperGrid {
+  @include mq(desktop) {
+    display: flex;
+    gap: 27px;
+  }
+}
+
+.title {
+  margin-bottom: 16px;
+
+  @include font(20px, 700, 1.4);
+  text-align: left;
+}
+
+.description {
+  margin-bottom: 16px;
+
+  @include mq(tablet) {
+    margin-bottom: 12px;
+  }
+}
+
+.cautionWrapper {
+  padding: 20px;
+  margin-bottom: 24px;
+
+  border-radius: 4px;
+  background-color: var(--light-blue-cl);
+}
+
+.cautionTitle {
+  margin-bottom: 16px;
+
+  @include font(18px, 600, 1.55);
+  text-align: left;
+}

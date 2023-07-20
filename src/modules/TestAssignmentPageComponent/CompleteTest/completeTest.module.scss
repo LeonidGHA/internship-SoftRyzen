@@ -1,0 +1,41 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.formTabletWrapper {
+  width: 336px;
+  .openModalBtn {
+    margin-bottom: 20px;
+  }
+}
+
+.deadline {
+  padding: 8px 14px;
+  margin-bottom: 40px;
+
+  border-radius: 4px;
+
+  @include font(20px, 600, 1.4);
+  text-align: center;
+  color: var(--accent-cl);
+
+  background-color: #fff;
+}
+
+.warning {
+  @include font(12px, 400, 1.33);
+  text-align: center;
+  color: var(--red-cl);
+}
+
+.box {
+  padding: 20px 16px 72px;
+
+  border-radius: 4px;
+  background-color: var(--light-blue-cl);
+}
+
+.formTitle {
+  margin-bottom: 20px;
+
+  text-align: center;
+  @include font(var(--subtitle), 600, 1.4);
+}

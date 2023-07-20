@@ -1,0 +1,45 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.chooseModalWrapper {
+  @include mq(mobile-only) {
+    width: 65vw;
+    max-width: 392px;
+  }
+
+  @include flex(center, center, column);
+  @include mq(tablet) {
+    width: 392px;
+  }
+}
+
+.chooseModalTitle {
+  @include font(20px, 700, 1.4);
+}
+.chooseModalSubtitle {
+  @include font(20px, 700, 1.4);
+}
+
+.chooseModalBtnsWrapper {
+  @include flex(center, center, column);
+
+  gap: 16px;
+  margin-top: 40px;
+  @include mq(tablet) {
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 60px;
+  }
+}
+
+.chooseModalBtnBack {
+  width: 186px;
+  height: 48px;
+  border: 1px solid;
+  border-radius: 2px;
+}
+
+.chooseModalBtnExit {
+  width: 186px;
+  height: 48px;
+  border-radius: 2px;
+}

@@ -1,0 +1,19 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.form {
+  margin: 0 auto;
+  margin-top: 28px;
+  @include mq(tablet) {
+    margin-top: 40px;
+  }
+  label {
+    display: flex;
+    justify-content: center;
+    span {
+      @include font(var(--text-md), 400, 1.4);
+    }
+  }
+  .continueBtn {
+    margin-top: 40px;
+  }
+}

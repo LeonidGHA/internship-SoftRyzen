@@ -1,0 +1,33 @@
+{
+  "title": "Результат тесту",
+  "correctAnswersText": "Правильні відповіді",
+  "timeSpentText": "Витрачений час",
+  "buttonLinkText": "Завершити тест",
+  "resultText": {
+    "positive": "Тест пройдений",
+    "negative": "Тест не пройдений"
+  },
+  "progressData": [
+    {
+      "title": "HTML/CSS",
+      "quantity": {
+        "overall": "20",
+        "right": "15"
+      }
+    },
+    {
+      "title": "JS",
+      "quantity": {
+        "overall": "20",
+        "right": "15"
+      }
+    },
+    {
+      "title": "React",
+      "quantity": {
+        "overall": "20",
+        "right": "15"
+      }
+    }
+  ]
+}

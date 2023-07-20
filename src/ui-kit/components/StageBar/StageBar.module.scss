@@ -1,0 +1,16 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.stageBar {
+  margin-left: auto;
+  margin-right: 65px;
+  padding-bottom: 24px;
+  width: 496px;
+  @include flex();
+  gap: 12px;
+}
+
+.line {
+  width: 100%;
+  border: solid 1px var(--auth-btn-disbl-cl);
+  border-radius: 4px;
+}

@@ -1,0 +1,46 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.rulesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 556px;
+
+  padding: 60px 0;
+  margin: 0 auto;
+
+  @include mq(tablet) {
+    padding: 77px 0;
+  }
+  @include mq(desktop) {
+    max-width: 572px;
+  }
+  .title {
+    text-align: center;
+    color: var(--accent-cl);
+    @include font(var(--subtitle), bold, 1.4);
+    span {
+      display: block;
+      margin-top: 4px;
+
+      font-weight: 300;
+    }
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    margin-top: 40px;
+  }
+  .item {
+    display: flex;
+    @include font(var(--text-sm), 400, 1.33);
+    span {
+      margin-right: 12px;
+      @include font(var(--subtitle), 600, 1);
+      color: var(--light-blue-number-cl);
+    }
+  }
+}

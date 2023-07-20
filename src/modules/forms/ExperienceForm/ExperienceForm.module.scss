@@ -1,0 +1,43 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.form {
+  max-width: 774px;
+  margin: auto;
+
+  label {
+    @include mq(mobile-only) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include mq(tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    column-gap: 33px;
+    row-gap: 20px;
+
+    & button {
+      grid-column: span 2;
+    }
+
+    & .checkBox {
+      grid-column: span 2;
+
+      max-width: 576px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+    }
+
+    @include mq(desktop) {
+      .textarea {
+        @include font(14px, 400, 1.4);
+      }
+      .checkBox {
+        margin-bottom: 16px;
+      }
+      column-gap: 24px;
+    }
+  }
+}

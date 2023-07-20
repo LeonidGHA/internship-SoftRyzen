@@ -1,0 +1,102 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.assignmentDescription {
+  @include mq(tablet) {
+    max-width: 336px;
+  }
+  @include mq(desktop) {
+    max-width: 463px;
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+
+  @include font(var(--subtitle), 600, 1.4);
+  color: var(--accent-cl);
+
+  @include mq(desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.subtitle {
+  @include font(18px, 400, 1.55);
+  color: var(--accent-cl);
+
+  &.technological {
+    margin-bottom: 11px;
+  }
+  &.material {
+    margin-bottom: 6px;
+  }
+  &.criterion {
+    margin-bottom: 12px;
+  }
+}
+
+.description {
+  margin-bottom: 24px;
+
+  @include font(var(--subtitle), 300, 1.4);
+}
+
+.text {
+  margin-bottom: 28px;
+
+  @include mq(tablet) {
+    margin-bottom: 16px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 25px;
+  }
+  @include font(var(--text-sm), 400, 1.33);
+
+  span {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+}
+
+.iconsWrapper {
+  display: flex;
+  gap: 17px;
+  margin-bottom: 20px;
+
+  @include mq(tablet-only) {
+    margin-bottom: 16px;
+  }
+
+  .iconText {
+    max-width: 83px;
+    margin-top: 5px;
+
+    text-align: center;
+    @include font(var(--text-sm), 400, 1.33);
+  }
+}
+
+.btnWrapper {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+
+  @include mq(tablet-only) {
+    gap: 20px;
+  }
+  @include mq(desktop) {
+    flex-direction: row;
+    margin-bottom: 36px;
+    gap: 24px;
+  }
+}
+
+.button {
+  border-radius: 4px;
+  background-color: var(--toastify-bg-color-warning);
+  color: var(--accent-cl);
+  &:hover {
+    color: var(--light-secondary-txt-cl);
+  }
+}

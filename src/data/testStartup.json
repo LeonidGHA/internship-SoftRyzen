@@ -1,0 +1,31 @@
+{
+  "title": "Тест",
+  "returnLink": "Назад",
+  "buttonLinkText": "Розпочати тест",
+  "testInfo": {
+    "deadline": {
+      "title": "Дедлайн",
+      "data": "12.05.2023"
+    },
+    "timeLimit": {
+      "title": "Час проходження",
+      "data": "2:00:00"
+    },
+    "questions": {
+      "title": "Питання",
+      "data": "50"
+    },
+    "percentage": {
+      "title": "% відповідей для проходження",
+      "data": "45"
+    }
+  },
+  "blockResults": [
+    { "title": "react", "points": 15, "AllQuestion": 30 },
+    { "title": "javaScrip", "points": 15, "AllQuestion": 30 },
+    { "title": "CSS", "points": 15, "AllQuestion": 30 },
+    { "title": "HTML", "points": 15, "AllQuestion": 30 },
+    { "title": "PM", "points": 15, "AllQuestion": 0 },
+    { "title": "design", "points": 15, "AllQuestion": 0 }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "registration": {
+    "title": "Реєстрація",
+    "navLink": {
+      "textBeforeLink": "Вже маєш акаунт?",
+      "textLink": "Увійти"
+    },
+    "separationText": "або",
+    "inputEmailText": {
+      "label": "E-mail",
+      "placeholder": "Введіть поштову адресу"
+    },
+    "inputPasswordText": {
+      "label": "Пароль",
+      "placeholder": "Придумайте пароль"
+    },
+    "checkboxText": "Надсиланням даних за цією заявкою ви надаєте свою згоду на збір та обробку наданих вами персональних даних",
+    "buttonSubmitText": "Продовжити"
+  },
+  "login": {
+    "title": "З поверненням",
+    "navLink": {
+      "textBeforeLink": "Не маєте акаунта?",
+      "textLink": "Зареєструватися"
+    },
+    "separationText": "або",
+    "inputEmailText": {
+      "label": "E-mail",
+      "placeholder": "Введіть поштову адресу"
+    },
+    "inputPasswordText": {
+      "label": "Пароль",
+      "placeholder": "Введіть пароль"
+    },
+    "checkboxText": "Запам’ятати мене",
+    "textBtnLinkText": "Забули пароль?",
+    "buttonSubmitText": "Продовжити"
+  },
+  "notification": {
+    "email": {
+      "patternMessage": "Введіть існуючий email",
+      "minLengthMessage": "Мінімальна довжина 6 символів",
+      "maxLengthMessage": "Максимальна довжина 63 символи",
+      "checkEmailLoginMessage": "Цей еmail ще не зареєстрований",
+      "checkEmailRegistrationMessage": "Користувач з такою поштою вже існує"
+    },
+    "password": {
+      "patternMessage": "Пароль має містити і латиницю, і цифри",
+      "minLengthMessage": "Мінімальна довжина 6 символів",
+      "maxLengthMessage": "Максимальна довжина 32 символи"
+    },
+    "registration": {
+      "success": {
+        "title": "Перевірте свою пошту",
+        "message": "Ми надіслали на вашу пошту посилання на підтвердження E-mail"
+      }
+    }
+  }
+}

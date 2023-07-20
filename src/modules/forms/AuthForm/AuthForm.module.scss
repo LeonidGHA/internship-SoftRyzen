@@ -1,0 +1,81 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.form {
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 392px;
+}
+
+.textNavLink {
+  text-align: center;
+  margin-top: 4px;
+  @include mq(mobile-only) {
+    margin-top: 28px;
+  }
+}
+
+.googleButton {
+  margin-top: 28px;
+}
+
+.separation {
+  position: relative;
+  display: block;
+  margin-top: 12px;
+
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+
+    width: 40%;
+    border-top: 1px solid var(--light-blue-cl);
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+
+    width: 40%;
+    border-top: 1px solid var(--light-blue-cl);
+  }
+}
+
+.inputEmail {
+  margin-top: 12px;
+}
+
+.inputPassword {
+  margin-top: 8px;
+}
+
+.inputLabelColor {
+  color: var(--accent-cl);
+}
+
+.logInCheckboxWrapper {
+  @include flex(space-between, center, row);
+  margin-top: 4px;
+}
+
+.checkbox {
+  margin-top: 8px;
+  @include mq(desctop) {
+    margin-top: 12px;
+  }
+}
+
+.buttonSubmit {
+  margin-top: 40px;
+}

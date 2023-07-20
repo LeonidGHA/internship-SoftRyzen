@@ -1,0 +1,1 @@
+export { ForgotPassPageComponent } from './ForgotPassPageComponent';

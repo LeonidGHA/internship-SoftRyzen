@@ -1,0 +1,81 @@
+.question {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  user-select: none;
+}
+
+.answer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 492px;
+  padding: 20px 25px;
+  background-color: var(--secondary-cl);
+  border: 2px solid transparent;
+}
+
+.selectedAnswer {
+  border: 2px solid var(--blue-radio-cl);
+  border-radius: 5px;
+}
+
+.answerText {
+  margin-left: 20px;
+  width: 398px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 14px;
+  column-gap: 28px;
+  margin-bottom: 40px;
+}
+
+.radioButton {
+  appearance: none;
+  position: relative;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background-color: var(--light-radio-cl);
+}
+
+.radioButton:checked {
+  border: 2px solid var(--blue-radio-cl);
+  background-color: white;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-color: var(--blue-radio-cl);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.submitButton {
+  display: block;
+  min-width: 186px;
+  padding: 15px 28px;
+  margin-left: auto;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--secondary-cl);
+  background-color: var(--accent-cl);
+  border-radius: 2px;
+}
+
+.submitButton:disabled {
+  background-color: var(--test-btn-disbl-cl);
+}

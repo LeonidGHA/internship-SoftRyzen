@@ -1,0 +1,81 @@
+:root {
+  --accent-cl: #2565d0;
+  --hover-cl: #0054e0;
+
+  /*BACKGROUND COLORS*/
+  --primary-cl: #f5f6f9;
+  --secondary-cl: #fff; // header, pop-up,
+
+  --light-blue-cl: #dae3ff; // cards, calendar btns
+  --backdrop-cl: rgba(99, 115, 129, 0.4);
+  --backdrop-logout-cl: rgba(218, 227, 255, 0.6);
+  --layout-auth-page-cl: rgba(37, 101, 208, 0.32);
+
+  --auth-btn-disbl-cl: #d6dfe6;
+  --test-btn-disbl-cl: #dbdcdc;
+  --light-btn-hover-cl: var(--light-blue-cl);
+  --toastify-icon-color-success: ;
+
+  /* TEXT COLORS */
+  --primary-txt-cl: #212b36;
+  --secondary-txt-cl: #0a0e29; // google btn,
+
+  --secondaryCheckbox-txt-cl: #9d9fb5; // Checkbox
+
+  --placeholder-cl: #637381; //checkbox labels, placeholders
+
+  --light-primary-txt-cl: #f8f8f8;
+  --light-secondary-txt-cl: #fff;
+  // --light-secondary-txt-cl: #b9b9b9;
+  --light-blue-sidebar-cl: rgba(255, 255, 255, 0.16);
+  --light-blue-number-cl: #7698d0;
+  --sidebar-disabled-text-cl: #ffffff29;
+
+  /*BUTTONS*/
+  --copy-btn-cl: #5599ff;
+
+  /*TOAST COLORS*/
+  --toastify-icon-color-error: #f43f5e;
+  --toastify-text-color-warning: #755118;
+  --toastify-bg-color-warning: #dae3ff;
+  --toastify-icon-color-success: var(--green-cl);
+
+  /*OTHER COLORS*/
+  --red-cl: #f43f5e; //progressbar, toast
+  --second-red-cl: #ffc3ce;
+  --green-cl: #18b2a3;
+  --second-green-cl: #a8ebe4;
+  --blue-hover-cl: #aac7f6;
+  --light-radio-cl: #e9f0ff;
+  --grey-answers-progress-cl: rgba(99, 115, 129, 0.2);
+  --blue-radio-cl: #3653f2;
+  --spinner-cl: #2565d047;
+  --sidebar-icons-disabled-cl: #ffffff66;
+
+  /* TRANSITION */
+  --transition: 300ms linear;
+
+  /*FONTS*/
+  --font-nunito: 'Nunito Sans', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --line-height: 1.3;
+
+  /*FONT SIZE*/
+  --title: 30px;
+  --subtitle: 20px;
+  --text-lg: 16px;
+  --text-md: 14px;
+  --text-sm: 12px;
+
+  /*TOAST SIZE*/
+  --toastify-toast-width: 400px;
+
+  // /*FONT WEIGHT*/
+  // --light: 300;
+  // --semibold: 600;
+  // --bold: 700;
+
+  --light-primary-shadow: 2px 2px 8px rgba(95, 117, 238, 0.11);
+  // --shadow-blue: 1px 2px 6px rgba(54, 83, 242, 0.73);
+  // --shadow-blue-small: 1px 2px 8px rgba(1, 37, 233, 0.54);
+}

@@ -1,0 +1,122 @@
+@use '/src/styles/global.scss' as *;
+
+.iconBox {
+  width: 60px;
+  height: 60px;
+  @include flex(center, center);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
+
+  background-color: var(--light-blue-cl);
+  border-radius: 50%;
+
+  @include mq(desktop) {
+    margin: 0 9px 0 0;
+  }
+}
+
+.icon {
+  width: 34px;
+  height: 32px;
+}
+
+.descWrapper {
+  @include mq(desktop) {
+    width: 432px;
+    margin-right: auto;
+  }
+}
+
+.descWrapper > p {
+  color: var(--placeholder-cl);
+}
+
+.descWrapper > h3,
+.descWrapper > p {
+  @include mq(desktop) {
+    text-align: left;
+  }
+}
+
+.title {
+  margin-bottom: 4px;
+
+  @include font(18px, 600, 1.55);
+  text-align: center;
+
+  color: var(--accent-cl);
+}
+
+.desc {
+  margin-bottom: 16px;
+
+  @extend %text-sm;
+  text-align: center;
+
+  color: var(--placeholder-cl);
+
+  @include mq(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.techList {
+  width: 240px;
+  min-width: 240px;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -2px;
+
+  @include font(12px, 400, 1.2);
+  font-family: var(--font-inter);
+
+  color: var(--accent-cl);
+
+  @include mq(desktop) {
+    margin-right: auto;
+  }
+}
+
+.techItem {
+  height: max-content;
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 2px;
+
+  border-radius: 15px;
+
+  background-color: var(--light-blue-cl);
+}
+
+.btnsWrapper {
+  margin-top: auto;
+
+  @include mq(desktop) {
+    display: flex;
+    gap: 12px;
+    margin-top: 0;
+  }
+}
+
+.programBtn {
+  height: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+  border-radius: 2px;
+
+  @include mq(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.chooseBtn {
+  height: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
+
+  color: var(--light-secondary-txt-cl) !important;
+}

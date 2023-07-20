@@ -1,0 +1,101 @@
+@use '/src/styles/utils/mixins.scss' as *;
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  animation: show-modal 400ms forwards;
+}
+
+.backdropBGColorGray {
+  background: rgba(99, 115, 129, 0.4);
+  backdrop-filter: blur(7.5px);
+}
+
+.backdropBGColorLightBlue {
+  background: rgba($color: #dae3ff, $alpha: 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  overflow: auto;
+
+  min-width: 280px;
+  max-height: 90vh;
+
+  border-radius: 4px;
+}
+
+.modalBGColorWhite {
+  background-color: var(--secondary-cl);
+}
+.modalBGColorLightBlue {
+  background-color: var(--light-blue-cl);
+}
+
+.modalPaddingXSmall {
+  padding-left: 28px;
+  padding-right: 28px;
+  @include mq(mobile-only) {
+    padding-left: 47px;
+    padding-right: 47px;
+  }
+}
+.modalPaddingXMedium {
+  padding-left: 38px;
+  padding-right: 38px;
+}
+
+.modalPaddingXLarge {
+  padding-left: 54px;
+  padding-right: 54px;
+}
+
+.modalPaddingYSmall {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.modalPaddingYLarge {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.modalIconCloseWrapper {
+  position: absolute;
+}
+
+.modalIconCloseWrapperIndentSm {
+  top: 12px;
+  right: 12px;
+}
+
+.modalIconCloseWrapperIndentLg {
+  top: 24px;
+  right: 24px;
+}
+
+.modalIconClose {
+  stroke: var(--accent-cl);
+  @include transitioned(stroke);
+  &:hover,
+  &:focus {
+    stroke: var(--hover-cl);
+  }
+}
+
+@keyframes show-modal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
